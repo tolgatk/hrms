@@ -28,4 +28,9 @@ public class ExperienceController {
 		return experienceService.getByUserId(candidateId);
 	}
 
+	@DeleteMapping("/delete")
+	Result deleteByUserId(@RequestParam int userId){
+		return experienceService.deleteByUserId(userId);
+	}
+
 }
