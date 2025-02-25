@@ -43,6 +43,11 @@ public class ExperienceManager implements ExperienceService{
 
 	@Override
 	public DataResult<List<Experience>> getByUserId(int userId) {
+		List<Experience> experiences = experienceDao.findByCandidateId(userId);
+		if(experiences.isEmpty()) {
+			return new ErrorDataResult<>("Bu kullanıcıya ait deneyim bulunamadı");
+		}
+
 		return new SuccessDataResult<>(this.experienceDao.findByCandidateId(userId),"Data listelendi");
 	}
 
