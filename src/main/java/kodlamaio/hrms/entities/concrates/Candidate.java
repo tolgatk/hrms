@@ -19,8 +19,9 @@ import lombok.NoArgsConstructor;
 
 public class Candidate extends User{
 	
+	@Column(name = "img_url")
+	private String imgUrl;
 
-	
 	@Column(name="first_name")
 	private String firstName;
 	

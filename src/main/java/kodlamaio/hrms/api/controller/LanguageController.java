@@ -22,7 +22,6 @@ public class LanguageController {
     }
 
     @PostMapping("/add")
-
     public Result add(LanguageAddRequest languageAddRequest){
         return languageService.add(languageAddRequest);
     }
